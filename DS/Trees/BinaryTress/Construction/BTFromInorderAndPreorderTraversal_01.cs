@@ -64,6 +64,16 @@ namespace Trees
                 preorderTraversal(root.left);
                 preorderTraversal(root.right);
             }
+
+            void postorderTraversal(Node root)
+            {
+                if(root == null)
+                    return;
+                postorderTraversal(root.left);
+                postorderTraversal(root.right);
+                System.Console.Write(root.val + " ");
+            }
+
             public static void Main()
             {
                 int [] preorder = new int [] {10,9,5,4,6,7};
@@ -74,6 +84,8 @@ namespace Trees
                 bt.inorderTraversal(root);
                 System.Console.Write("\nPreorder traversal :");
                 bt.preorderTraversal(root);
+                System.Console.Write("\nPostorder traversal :");
+                bt.postorderTraversal(root);
             }
         }
     }    
