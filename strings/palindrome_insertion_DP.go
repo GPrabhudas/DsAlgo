@@ -1,5 +1,5 @@
 // // find minimum number of insertions to be made to make string palindrome
-// uncomment to run the program
+// //uncomment to run the program
 // package main
 
 // import (
@@ -7,7 +7,7 @@
 // )
 
 // func main() {
-// 	minInsertions := minPalindromeInsertions("geeksforgeeks")
+// 	minInsertions := minPalindromeInsertions("banana")
 // 	fmt.Printf("Minimum palindrome insertions : %v", minInsertions)
 // }
 // func minPalindromeInsertions(str string) int {
