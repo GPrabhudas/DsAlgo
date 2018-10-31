@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var requestUrl = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+	var request = new XMLHttpRequest();
+	request.open('GET',requestUrl);
+	request.responseType='json';
+	request.send();
+	request.onload = function(){
+		console.log(request.response);
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<script type="text/javascript">
+	function Person(first,last,age,gender,interests){
+		this.name = {first,last};
+		this.age=age;
+		this.age=age;
+		this.gender=gender;
+		this.interests=interests;
+		/*this.sayHi=function(){
+			alert("Hi From Person Object method");
+		}*/
+	}
+
+	Person.sayHi=function(){
+		alert("Hi Everyone from"+this.first.name);
+	}
+
+	Person.prototype.greetings=function(){
+		alert("Hello "+this.first+" from Person prototype");
+	}
+
+	Person.prototype.farewell=function(){
+		alert("Good Bye"+this.name.first);
+	}
+
+
+    function Teacher(first,last,age,gender,interests,subjects){
+		Person.call(this,first,last,age,gender,interests);
+		this.subjects = subjects;
+		/*this.greetings=function(){
+			alert("hello from Teacher Object method");
+		}*/
+	}
+	Teacher.prototype = Object.create(Person.prototype);
+	Teacher.prototype.constructor=Teacher;
+
+	Teacher.prototype.greetings = function(){
+		alert("Hellor from Teacher Protype function");
+	}
+
+	var t = new Teacher("prabhudas","garule",25,"Male",["reading","coding","music"],["DS","Algo"]);
+</script>
