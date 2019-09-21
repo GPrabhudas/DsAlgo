@@ -12,7 +12,9 @@ func selectionSort(arr []int) {
 	k := 0
 	for i := range arr {
 		minIndex := getMinIndex(arr, i)
-		arr[k], arr[minIndex] = arr[minIndex], arr[k]
+		if minIndex != i {
+			arr[k], arr[minIndex] = arr[minIndex], arr[k]
+		}
 		k++
 	}
 }
